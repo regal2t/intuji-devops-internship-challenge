@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  php-apache:
+    container_name: php-hello-world
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8082:80"
+    volumes:
+      - ./:/var/www/html
+    restart: always
