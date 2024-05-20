@@ -44,6 +44,10 @@ sudo docker push rajutiwari181627/helloimg:v1.0
 
 [Link to dockerhub](https://hub.docker.com/r/rajutiwari181627/helloimg)
 
+## output
+![image](https://github.com/regal2t/intuji-devops-internship-challenge/assets/59367122/aca952b1-8bdc-4902-a161-d23db17a8eb7)
+
+
 
 ##  3 create docker-compose & run 
 
