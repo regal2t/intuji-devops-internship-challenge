@@ -11,7 +11,6 @@ git clone (https://github.com/silarhi/php-hello-world.git).
 
 ```
 #### 2.1 Create Dockerfile
-[Link]()
 
 Building Dockerfile
 ```bash
@@ -65,3 +64,35 @@ sudo apt-get install jenkins
 default port for jenkins is 8080
 ```
 ![Image]()
+
+#### script for jenkins(build) 
+```bash
+#!/bin/bash
+
+# Variables
+REPO_URL="https://github.com/regal2t/intuji-devops-internship-challenge.git"
+DOCKER_IMAGE_NAME="phpimg"
+DOCKER_IMAGE_TAG="latest"
+WORKDIR="/var/www/html"
+# Clean workspace
+rm -rf $WORKDIR
+# Clone the repository
+git clone $REPO_URL $WORKDIR
+
+cd php-hello-world
+# Navigate to the working directory
+cd $WORKDIR
+# Build the Docker image
+docker build -t $DOCKER_IMAGE_NAME:$DOCKER_IMAGE_TAG . .
+echo "Docker image built and tagged as ${DOCKER_IMAGE_NAME}: and ${DOCKER_IMAGE_TAG}:latest"
+```
+![Image]()
+
+## result in jenkins
+
+![Image]()
+
+![Image]()
+
+# End
+
